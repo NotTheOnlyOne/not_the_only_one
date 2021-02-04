@@ -47,4 +47,3 @@ Werkzeug
 WTForms
 xlrd
 config
-mysqlclient

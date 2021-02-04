@@ -9,7 +9,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import CSRFProtect
 from base64 import b64decode
 
-from config import config as Config
+import config as Config
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -44,12 +44,13 @@ class CustomSessionInterface(SecureCookieSessionInterface):
                                                                 **kwargs)
 
 app = Flask(__name__)
-config_name = config = 'default'
+config_name = config = 'app.config.DevelopmentConfig'
 
 if not isinstance(config, str):
     config_name = os.getenv('FLASK_CONFIG', 'default')
 
-app.config.from_object(Config[config_name])
+print(config_name)
+app.config.from_object(config_name)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # not using sqlalchemy event system, hence disabling it
 
