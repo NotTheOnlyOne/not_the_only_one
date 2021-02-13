@@ -49,8 +49,6 @@ config_name = config = 'default'
 if not isinstance(config, str):
     config_name = os.getenv('FLASK_CONFIG', 'default')
 
-print(config_name)
-print(Config[config_name])
 app.config.from_object(Config[config_name])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # not using sqlalchemy event system, hence disabling it

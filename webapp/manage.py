@@ -9,7 +9,7 @@ from rq import Connection, Queue, Worker
 
 from app import app, db
 from app.models import Role, User, Group, Story, Category, LookupValue
-import config as Config
+from config import Config
 
 #app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 manager = Manager(app)
