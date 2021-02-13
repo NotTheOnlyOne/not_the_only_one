@@ -43,6 +43,8 @@ class Config:
 
     # Admin account
     ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD', 'password')
+    ADMIN_FIRSTNAME = os.environ.get('ADMIN_FIRSTNAME', 'admin')
+    ADMIN_LASTNAME = os.environ.get('ADMIN_LASTNAME', 'admin')
     ADMIN_EMAIL = os.environ.get(
         'ADMIN_EMAIL', 'flask-base-admin@example.com')
     EMAIL_SUBJECT_PREFIX = '[{}]'.format(APP_NAME)
@@ -52,6 +54,14 @@ class Config:
     REDIS_URL = os.getenv('REDISTOGO_URL', 'http://localhost:6379')
 
     RAYGUN_APIKEY = os.environ.get('RAYGUN_APIKEY')
+
+    # Setup First user
+        
+    USER_EMAIL = os.environ.get('USER_EMAIL', 'flask-base-user@example.com')
+    USER_FIRSTNAME = os.environ.get('USER_FIRSTNAME', 'admin')
+    USER_LASTNAME = os.environ.get('USER_LASTNAME', 'admin')
+    USER_PASSWORD = os.environ.get('USER_PASSWORD', 'password')
+
 
     # Parse the REDIS_URL to set RQ config variables
     if PYTHON_VERSION == 3:
