@@ -6,6 +6,21 @@ https://github.com/hack4impact/flask-base
 ## Notes
 
 * Need to write your own config.py! See the sample config.py included
+* You will need a config.env - example one below (USER_* is for the first user that is not an admin):
+
+SECRET_KEY=<addsomething here>
+MAIL_USERNAME=SendgridUsername
+MAIL_PASSWORD=SendgridPassword
+ADMIN_EMAIL=<addsomething here>
+ADMIN_PASSWORD=<addsomething here>
+DATABASE_URL=data-dev.sqlite
+FLASK_CONFIG=development
+ADMIN_FIRSTNAME=<addsomething here>
+ADMIN_LASTNAME=<addsomething here>
+USER_EMAIL=<addsomething here>
+USER_FIRSTNAME=<addsomething here>
+USER_LASTNAME=<addsomething here>
+USER_PASSWORD=<addsomething here>
 
 ## Setup and running
 
