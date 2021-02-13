@@ -62,6 +62,10 @@ class Config:
     USER_LASTNAME = os.environ.get('USER_LASTNAME', 'admin')
     USER_PASSWORD = os.environ.get('USER_PASSWORD', 'password')
 
+    # Twitter stuff
+    CONSUMER_KEY = os.environ.get('CONSUMER_KEY', 'not_set')
+    CONSUMER_SECRET = os.environ.get('CONSUMER_SECRET', 'not_set')
+    MAX_TWITTER_OEMBED_WIDTH = os.environ.get('MAX_TWITTER_OEMBED_WIDTH','3')
 
     # Parse the REDIS_URL to set RQ config variables
     if PYTHON_VERSION == 3:

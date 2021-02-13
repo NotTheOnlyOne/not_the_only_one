@@ -46,4 +46,5 @@ webassets
 Werkzeug
 WTForms
 xlrd
+nltk
 mysqlclient
