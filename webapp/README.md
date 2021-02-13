@@ -59,4 +59,7 @@ Run:
 
 ```bash
 honcho start -e config.env -f Local
+
+or 
+python manage.py runserver -h 0.0.0.0
 ```
