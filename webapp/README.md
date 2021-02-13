@@ -1,5 +1,8 @@
 # #NotTheOnlyOne WebApp
 
+This is based on flask-base:
+https://github.com/hack4impact/flask-base
+
 ## Notes
 
 * Need to write your own config.py! See the sample config.py included
