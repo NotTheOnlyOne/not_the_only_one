@@ -61,5 +61,11 @@ Run:
 honcho start -e config.env -f Local
 
 or 
+
 python manage.py runserver -h 0.0.0.0
+
+or
+
+gunicorn --bind 0.0.0.0:5000 wsgi 
+
 ```
