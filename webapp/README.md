@@ -66,6 +66,7 @@ python manage.py runserver -h 0.0.0.0
 
 or
 
+conda activate ntoo
 gunicorn --bind 0.0.0.0:5000 wsgi 
 
 ```
